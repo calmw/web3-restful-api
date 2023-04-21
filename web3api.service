@@ -1,0 +1,15 @@
+[Unit]
+Description=web3 reatful api
+After=mysql.service
+StartLimitBurst=5
+StartLimitIntervalSec=60
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/data/www/web3_api/start.sh
+#Environment="PATH=/etc/systemd/pledge.env"
+[Install]
+WantedBy=multi-user.target
+
